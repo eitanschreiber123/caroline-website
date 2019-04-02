@@ -1,0 +1,92 @@
+html, body {
+  font-family: alice_in_wonderlandregular;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.outer {
+  width: 100%;
+  height: 100%;
+  background-image: url('../tree-hollow.jpeg');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+@font-face {
+    font-family: 'alice_in_wonderlandregular';
+    src: url('alice_in_wonderland_3-webfont.woff2') format('woff2'),
+         url('alice_in_wonderland_3-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+h1 {
+  font-size: 8em;
+}
+h1:hover {
+  color: red;
+}
+button {
+  background-color: red;
+  border: none;
+  padding: 1.2% 2.5%;
+}
+.second {
+  display: none;
+  width: 100%;
+  background-color: black;
+}
+.top {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, auto));
+  grid-auto-flow: rows;
+  grid-auto-rows: 1fr;
+}
+.top, .bottom {
+animation-name: appear;
+animation-duration: 2s;
+}
+@keyframes appear {
+from {opacity: 0}
+to {opacity: 1;}
+}
+.top div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+h2, p {
+  color: red;
+}
+p, a {
+  font-size: 2em;
+}
+h2 {
+  font-size: 6em;
+  text-decoration: underline;
+}
+.bottom {
+  background-color: black;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  padding: 0.5rem 0.1rem;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+.bottom a {
+  padding: 0.5rem 0.1rem;
+}
